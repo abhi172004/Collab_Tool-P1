@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Dashboard from './Components/Dashboard';
+import Chat from './Components/Chat';
 
 function App() {
   const isLoggedIn = !!localStorage.getItem('user');
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={isLoggedIn ? <Dashboard /> : <Navigate to="/register" />} />
+        <Route path="/dashboard" element={isLoggedIn ? <><Dashboard /><Chat /></> : <Navigate to="/register" />} />
       </Routes>
     </Router>
   );
