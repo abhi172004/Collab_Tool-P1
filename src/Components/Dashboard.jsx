@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Chat from './Chat';
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([]);
@@ -37,8 +38,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-      <div className="bg-gray-300  p-6 rounded-lg shadow-lg">
+    <div className="container mx-auto mt-12 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="bg-gray-300 p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Tasks</h2>
         <div className="mb-4">
           <input 
@@ -82,7 +83,7 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-      {/* Additional cards can be added here */}
+      <Chat />
     </div>
   );
 };

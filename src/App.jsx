@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={isLoggedIn ? <><Dashboard /><Chat /></> : <Navigate to="/register" />} />
+        <Route path="/dashboard" element={isLoggedIn ? <Dashboard /> : <Navigate to="/register" />} />
       </Routes>
     </Router>
   );
